@@ -1,0 +1,71 @@
+﻿@inherits LayoutComponentBase
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamersClub Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="GamersClub Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">JOGAR AGORA</a></li>
+                    <li><a href="#">CAMPEONATOS</a></li>
+                    <li><a href="#">ACADEMY</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="button">JOGUE GRÁTIS</a>
+                <a href="#" class="button">ENTRAR</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <h2>ACADEMY</h2>
+            <ul>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Aulas</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+
+            <div class="courses">
+                <h3>Cursos Disponíveis</h3>
+                <ul class="course-list">
+                    <li class="course-item">
+                        <img src="curso1.jpg" alt="Curso 1">
+                        <div class="course-info">
+                            <h4>FELPS: THE SMOKE CRIMINAL</h4>
+                            <span class="course-lesson-count">6 aulas</span>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <img src="curso2.jpg" alt="Curso 2">
+                        <div class="course-info">
+                            <h4>Na Tela do PRO</h4>
+                            <span class="course-lesson-count">7 aulas</span>
+                        </div>
+                    </li>
+                    <li class="course-item">
+                        <img src="curso3.jpg" alt="Curso 3">
+                        <div class="course-info">
+                            <h4>Fundamentos coletivos</h4>
+                            <span class="course-lesson-count">12 aulas</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <section class="highlight">
+            @Body
+        </section>
+    </main>
+</body>
+</html>
