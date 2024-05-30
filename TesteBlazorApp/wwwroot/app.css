@@ -1,107 +1,142 @@
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #fff;
+    background-color: #1c1c1c;
+    color: #aeb2b8;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     background: linear-gradient(90deg, #1a1a1a, #0d0d0d);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo img {
     height: 40px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    font-family: Teko, sans-serif;
+    font-weight: 700;
 }
 
-nav ul li {
-    margin-left: 20px;
+nav {
+    flex-grow: 1;
+    text-align: center;
 }
 
-nav ul li a {
-    color: #00ff00;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ff0000;
-}
-
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.auth-buttons .button {
-    background-color: #ff0000;
-    color: #fff;
+.nav-links li {
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.auth-buttons .button:hover {
-    background-color: #00ff00;
-    transform: scale(1.05);
-}
+    .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+        font-weight: 900;
+        line-height: 1.6;
+        letter-spacing: 1.5px;
+        display: block;
+    }
 
+    .nav-links li:hover {
+        color: #4576A2;
+        border-left: 1px solid #4576A2;
+        border-right: 1px solid #4576A2;
+    }
+
+    .nav-links li a:hover {
+        color: #4576A2;
+    }
+
+
+    .auth-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .auth-buttons .button {
+        background-color: #ff0000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .auth-buttons .button:hover {
+            background-color: #00ff00;
+            transform: scale(1.05);
+        }
+
+/* Main Content Styles */
 main {
     display: flex;
     padding: 20px;
 }
 
+/* Aside Styles */
 aside {
     width: 250px;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: #232323;
     border-right: 2px solid #333;
 }
 
-aside h2, aside h3 {
-    margin-top: 0;
-    color: #00ff00;
-}
+    aside h2, aside h3 {
+        margin-top: 0;
+        color: #0797F5;
+    }
 
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
+    aside ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-aside ul li {
-    margin-bottom: 10px;
-}
+        aside ul li {
+            margin-bottom: 10px;
+        }
 
-aside ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+            aside ul li a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
 
-aside ul li a:hover {
-    color: #00ff00;
-}
+                aside ul li a:hover {
+                    color: #4576A2;
+                }
 
-aside .courses {
+.courses {
     margin-top: 20px;
 }
 
+/* Highlight Section Styles */
 .highlight {
     flex-grow: 1;
     padding: 20px;
@@ -110,10 +145,10 @@ aside .courses {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.highlight h2 {
-    margin-top: 0;
-    color: #00aaff;
-}
+    .highlight h2 {
+        margin-top: 0;
+        color: #00aaff;
+    }
 
 .highlight-content {
     display: flex;
@@ -130,52 +165,28 @@ aside .courses {
     margin-left: 20px;
 }
 
-.highlight-info h3 {
-    margin-top: 0;
-    color: #ff0000;
-}
-
-.highlight-info .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00aaff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.highlight-info .button:hover {
-    background-color: #ff0000;
-    transform: scale(1.05);
-}
-
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1c1c1c;
-    color: #eaeaea;
-}
-
-aside {
-    width: 250px;
-    padding: 20px;
-    background-color: #232323;
-    border-right: 2px solid #333;
-}
-
-    aside .courses h3 {
-        color: #00ff88;
+    .highlight-info h3 {
         margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 1.2em;
-        text-transform: uppercase;
+        color: #4576A2;
     }
 
+    .highlight-info .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #00aaff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .highlight-info .button:hover {
+            background-color: #ff0000;
+            transform: scale(1.05);
+        }
+
+/* Course List Styles */
 .course-list {
     list-style-type: none;
     padding: 0;
@@ -219,3 +230,100 @@ aside {
     color: #00b3ff;
     margin-top: 5px;
 }
+
+/* Button Styles */
+.loginbutton,
+.loginbutton::after {
+    padding: 10px 30px;
+    font-size: 16px;
+    background: linear-gradient(45deg, transparent 5%, #0797F5 5%);
+    border: 0;
+    color: white;
+    letter-spacing: 3px;
+    line-height: 1;
+    box-shadow: 6px 0px 0px #4576A2;
+    outline: transparent;
+    position: relative;
+}
+
+    .loginbutton::after {
+        --slice-0: inset(50% 50% 50% 50%);
+        --slice-1: inset(80% -6px 0 0);
+        --slice-2: inset(50% -6px 30% 0);
+        --slice-3: inset(10% -6px 85% 0);
+        --slice-4: inset(40% -6px 43% 0);
+        --slice-5: inset(80% -6px 5% 0);
+        content: "BUG";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 3%, #4576A2 3%, #4576A2 5%, #4576A2 5%);
+        text-shadow: -3px -3px 0px gray, 3px 3px 0px gray;
+        clip-path: var(--slice-0);
+    }
+
+    .loginbutton:hover::after {
+        animation: 1s glitch;
+        animation-timing-function: steps(2, end);
+    }
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+

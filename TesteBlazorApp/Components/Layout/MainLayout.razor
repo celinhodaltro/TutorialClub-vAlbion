@@ -1,5 +1,4 @@
 ﻿@inherits LayoutComponentBase
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamersClub Academy</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/9585aa935e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -15,21 +15,31 @@
                 <img src="logo.png" alt="GamersClub Logo">
             </div>
             <nav>
-                <ul>
-                    <li><a href="#" class="active">JOGAR AGORA</a></li>
-                    <li><a href="#">CAMPEONATOS</a></li>
-                    <li><a href="#">ACADEMY</a></li>
+                <ul class="nav-links">
+                    <li>
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                        <a href="#" class="active">ACADEMY</a> 
+                    </li>
+                    <li class="with-line">
+                        <i class="fa-solid fa-trophy"></i> 
+                        <a href="#">CAMPEONATOS</a>
+                    </li>
+                    <li class="with-line">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <a href="#">Guildas</a>
+                    </li>
                 </ul>
             </nav>
             <div class="auth-buttons">
-                <a href="#" class="button">JOGUE GRÁTIS</a>
-                <a href="#" class="button">ENTRAR</a>
+                <button href="#" class="loginbutton">ENTRAR</button>
             </div>
         </div>
     </header>
     <main>
         <aside>
-            <h2>ACADEMY</h2>
+            <hr />
+            <h3>ACADEMY</h3>
+
             <ul>
                 <li><a href="#">Shorts</a></li>
                 <li><a href="#">Aulas</a></li>
@@ -37,7 +47,9 @@
             </ul>
 
             <div class="courses">
-                <h3>Cursos Disponíveis</h3>
+                <hr />
+                <h3>Cursos</h3>
+
                 <ul class="course-list">
                     <li class="course-item">
                         <img src="curso1.jpg" alt="Curso 1">
@@ -61,6 +73,7 @@
                         </div>
                     </li>
                 </ul>
+                <hr />
             </div>
         </aside>
         <section class="highlight">
