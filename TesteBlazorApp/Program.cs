@@ -1,4 +1,4 @@
-using TesteBlazorApp.Components;
+using System.Server.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
