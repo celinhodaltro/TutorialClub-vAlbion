@@ -1,0 +1,15 @@
+﻿@page "/Auth/Protected"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Identity
+@using System.ComponentModel.DataAnnotations
+@attribute [Authorize]
+
+<AuthorizeView>
+    <Authorized>
+        <h3>Você está autenticado!</h3>
+    </Authorized>
+    <NotAuthorized>
+        <h3>Você não está autorizado a ver esta página.</h3>
+        <a href="/login">Login</a>
+    </NotAuthorized>
+</AuthorizeView>

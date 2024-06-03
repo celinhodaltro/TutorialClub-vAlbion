@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Components\Pages\Auth\Protected;razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Components\Pages\Auth\Protected.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.6" />
+  </ItemGroup>
+
 </Project>

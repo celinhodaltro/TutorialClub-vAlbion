@@ -1,0 +1,65 @@
+﻿@page "/Auth/Login"
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Identity
+@using System.ComponentModel.DataAnnotations
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject SignInManager<IdentityUser> SignInManager
+@inject NavigationManager Navigation
+
+<EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="username" @bind-Value="loginModel.Username" placeholder="Username" />
+    <InputText id="password" @bind-Value="loginModel.Password" placeholder="Password" type="password" />
+    <button type="submit">Login</button>
+
+    <button @onclick="() => AuthenticateWithSteam()">Logar com Steam</button>
+</EditForm>
+
+@code {
+    private LoginModel loginModel = new();
+
+    private async Task HandleLogin()
+    {
+        var result = await SignInManager.PasswordSignInAsync(loginModel.Username, loginModel.Password, false, false);
+        if (result.Succeeded)
+        {
+            Navigation.NavigateTo("/");
+        }
+        else
+        {
+
+        }
+    }
+
+    private async Task AuthenticateWithSteam()
+    {
+        Navigation.NavigateTo("https://steamcommunity.com/openid/login");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+
+        }
+        else
+        {
+            Navigation.NavigateTo("/Auth/Protected");
+        }
+    }
+
+    private class LoginModel
+    {
+        [Required]
+        public string? Username { get; set; }
+        [Required]
+        public string? Password { get; set; }
+    }
+}

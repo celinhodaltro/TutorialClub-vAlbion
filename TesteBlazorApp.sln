@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Server", "TesteBlazorApp\System.Server.csproj", "{AF5C4AD1-51BF-4C87-9EB4-EB480BC785E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23471436-EB0F-4A3A-B024-05C0C8489B4C} = {23471436-EB0F-4A3A-B024-05C0C8489B4C}
+		{31ED403C-3B00-4F13-874F-C1CE3AC2536F} = {31ED403C-3B00-4F13-874F-C1CE3AC2536F}
+		{47D93F23-06F3-4152-A675-157947000B02} = {47D93F23-06F3-4152-A675-157947000B02}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.BusinessRules", "System.Business\System.BusinessRules.csproj", "{31ED403C-3B00-4F13-874F-C1CE3AC2536F}"
 EndProject
